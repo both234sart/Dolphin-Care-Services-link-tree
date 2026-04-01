@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ocean-blue: #0B3C5D;
+  --color-aqua-blue: #1CA7EC;
+  --color-teal-green: #2BB673;
+  
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-white text-ocean-blue antialiased;
+  }
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0px); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+  animation: float 8s ease-in-out infinite;
+  animation-delay: 2s;
+}
